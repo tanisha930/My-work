@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_csv('data.csv')
+print(df.head())
+print(df.isnull().sum())
+df.fillna(method='ffill', inplace=True)
+df.dropna(inplace=True)
+print(df.duplicated().sum())
+df.drop_duplicates(inplace=True)
+df.columns=df.columns.str.strip().str.lower().str.replace(' ', '_')
+print(df.describe())
