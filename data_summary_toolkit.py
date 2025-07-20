@@ -1,0 +1,13 @@
+import pandas as pd
+df= pd.read_csv ("data.csv")
+print("dataset shape", df.shape)
+print("\n dataset columns", df.columns.tolist())
+print(df.info())
+print("\n descriptive statistics;\n") 
+print(df.describe())
+print("/n unique values in each column:\n")
+print(df.nunique())
+print("\n null values in each column:\n")
+print(df.isnull().sum())
+print("\n duplicate rows in the dataset:\n")
+print(df.duplicated().sum())
