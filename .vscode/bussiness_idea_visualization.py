@@ -20,7 +20,7 @@ class BusinessAnalytics:
     failure_rate: float
 
 class EnhancedBusinessIdeaGenerator:
-    def _init_(self, csv_file_path: str):
+    def __init__(self, csv_file_path: str):
         """
         Initialize the enhanced business idea generator with csv data
         """
@@ -552,5 +552,5 @@ def main():
     generator = EnhancedBusinessIdeaGenerator(csv_filename)
     generator.run_enhanced_generator()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
